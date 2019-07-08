@@ -1,0 +1,64 @@
+{
+    "manifest_version": 2,
+    "name": "henhance",
+    "description": "henhance",
+    "version": "1.0.0",
+    "browser_action": {
+        "default_icon": "icon/icon16.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["contextMenus","storage","https://exhentai.org/*"],
+    "content_scripts": [
+        {
+            "matches": ["*://exhentai.org/*", "*://e-hentai.org/*"],
+            "exclude_matches": [
+                "https://exhentai.org/g/*",
+                "https://exhentai.org/torrents*",
+                "https://exhentai.org/uconfig*",
+                "https://exhentai.org/upload/manage*",
+                "https://exhentai.org/s*",
+                "https://exhentai.org/gallerypopups*",
+                "https://exhentai.org/archiver*",
+                "https://exhentai.org/gallerytorrents*",
+                "https://e-hentai.org/g/*",
+                "https://e-hentai.org/torrents*",
+                "https://e-hentai.org/uconfig*",
+                "https://e-hentai.org/upload/manage*",
+                "https://e-hentai.org/s*",
+                "https://e-hentai.org/home*",
+                "https://e-hentai.org/toplist*",
+                "https://e-hentai.org/bounty*",
+                "https://e-hentai.org/news*",
+                "https://e-hentai.org/gallerypopups*",
+                "https://e-hentai.org/archiver*",
+                "https://e-hentai.org/gallerytorrents*",
+                "https://e-hentai.org/lofi*",
+                "https://e-hentai.org/tos*",
+                "https://e-hentai.org/stats*"
+            ],
+            "js": ["content/main.ts"]
+        }
+    ],
+    "icons": {
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png"
+    },
+    "web_accessible_resources": [
+        "lanIcon/jp.png",
+        "lanIcon/cn.png",
+        "lanIcon/en.png",
+        "lanIcon/kr.png",
+        "lanIcon/netherlands.png",
+        "lanIcon/france.png",
+        "lanIcon/germany.png",
+        "lanIcon/hungary.png",
+        "lanIcon/italy.png",
+        "lanIcon/poland.png",
+        "lanIcon/portugal.png",
+        "lanIcon/russia.png",
+        "lanIcon/spain.png",
+        "lanIcon/thai.png",
+        "lanIcon/vietnam.png"
+    ]
+}

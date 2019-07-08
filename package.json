@@ -1,0 +1,26 @@
+{
+  "name": "henhance",
+  "version": "1.0.0",
+  "description": "A chrome extension for e-hentai/exhentai.",
+  "main": "main.js",
+  "scripts": {
+    "build": "parcel build src/manifest.json -d build --public-url ./ && node fix_path.js"
+  },
+  "author": "chuang861012",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.86",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^6.0.1",
+    "eslint-plugin-react": "^7.14.2",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-web-extension": "^1.5.2",
+    "typescript": "^3.5.2"
+  }
+}
