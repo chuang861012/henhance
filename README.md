@@ -1,7 +1,7 @@
 # henhance
 Enhance e-hentai & exhentai browsing experience!    
-更友善的 e-hentai & exhentai 瀏覽體驗
-![image](https://github.com/chuang861012/henhance/blob/master/readme_resource/demo.jpg)[https://chrome.google.com/webstore/detail/henhance-make-e-hentaiexh/ledkdgpoghklhhhkoamnegifdjooafkf]
+更友善的 e-hentai & exhentai 瀏覽體驗    
+[![image](https://github.com/chuang861012/henhance/blob/master/readme_resource/demo.jpg)][https://chrome.google.com/webstore/detail/henhance-make-e-hentaiexh/ledkdgpoghklhhhkoamnegifdjooafkf]
 
 ## Features
 - language icon | 語言小圖標
