@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "henhance : Make e-hentai/exhentai more friendly",
+    "name": "henhance : Make e-hentai/exhentai friendly",
     "description": "Enhance e-hentai & exhentai browsing experience!",
     "version": "1.0.0",
     "browser_action": {
