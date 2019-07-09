@@ -1,12 +1,14 @@
-import * as React from 'React'
+import * as React from "React";
 import ReactDOM from "react-dom";
 
-import { App } from './components/app';
+import { App } from "./components/app";
 
-(() => {
-    // append modal
-    const modal = document.createElement("div");
-    document.body.prepend(modal);
+chrome.storage.sync.get(null, ({ run }) => {
+    if (run) {
+        // append modal
+        const modal = document.createElement("div");
+        document.body.prepend(modal);
 
-    ReactDOM.render(React.createElement(App), modal);
-})();
+        ReactDOM.render(React.createElement(App), modal);
+    }
+});

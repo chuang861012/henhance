@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div id="root"></div>
-    <script src="./popup/index.js"></script>
-</body>
+<html>
+    <head>
+        <title>Popup</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="item">
+                <label class="switch">
+                    <input type="checkbox" id="switch-box" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="item item-col">
+                <div class="item list-item item-hover">
+                    <a href="https://github.com/chuang861012/henhance" target="_blank">
+                        <img src="./icon/icon-github.svg" class="icon" />
+                        <span class="mid-text">Github</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="popup.ts"></script>
 </html>

@@ -51,6 +51,12 @@
             ]
         }
     ],
+    "background": {
+        "scripts": [
+            "events.ts"
+        ],
+        "persistent": false
+    },
     "icons": {
         "16": "icon/icon16.png",
         "48": "icon/icon48.png",
