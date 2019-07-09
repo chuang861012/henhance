@@ -1,28 +1,12 @@
-import { Api } from "./Api";
-import { lanIcon } from "./lanIcon";
+import * as React from 'React'
+import ReactDOM from "react-dom";
 
-(async () => {
-    const galleryTitleElements = document.querySelectorAll(".glink");
+import { App } from './components/app';
 
-    const galleryIdentifiers: [number, string][] = [];
+(() => {
+    // append modal
+    const modal = document.createElement("div");
+    document.body.prepend(modal);
 
-    galleryTitleElements.forEach((e: Element) => {
-        while(e.tagName !== 'A'){
-            e = e.parentElement;
-        }
-        const parsedLinkArr = e.getAttribute("href").split("/");
-        galleryIdentifiers.push([parseInt(parsedLinkArr[4]), parsedLinkArr[5]]);
-    });
-
-    const pending = await Promise.all(Api.get(galleryIdentifiers));
-    const gdata = pending.reduce((acc, val) => acc.concat(val), []);
-
-    for (let i = 0; i < galleryTitleElements.length; i++) {
-        const flagImage = document.createElement("img");
-        const language = gdata[i].tags.language || 'jp';
-        flagImage.setAttribute("src", lanIcon[language]);
-        galleryTitleElements[i].prepend(flagImage);
-    }
-
-    console.log(gdata);
+    ReactDOM.render(React.createElement(App), modal);
 })();

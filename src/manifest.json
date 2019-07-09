@@ -7,10 +7,17 @@
         "default_icon": "icon/icon16.png",
         "default_popup": "popup.html"
     },
-    "permissions": ["contextMenus","storage","https://exhentai.org/*"],
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "https://exhentai.org/*"
+    ],
     "content_scripts": [
         {
-            "matches": ["*://exhentai.org/*", "*://e-hentai.org/*"],
+            "matches": [
+                "*://exhentai.org/*",
+                "*://e-hentai.org/*"
+            ],
             "exclude_matches": [
                 "https://exhentai.org/g/*",
                 "https://exhentai.org/torrents*",
@@ -36,7 +43,12 @@
                 "https://e-hentai.org/tos*",
                 "https://e-hentai.org/stats*"
             ],
-            "js": ["content/main.ts"]
+            "js": [
+                "content/main.ts"
+            ],
+            "css": [
+                "content/style.css"
+            ]
         }
     ],
     "icons": {
@@ -59,6 +71,7 @@
         "lanIcon/russia.png",
         "lanIcon/spain.png",
         "lanIcon/thai.png",
-        "lanIcon/vietnam.png"
+        "lanIcon/vietnam.png",
+        "loader.svg"
     ]
 }

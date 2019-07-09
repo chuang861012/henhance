@@ -1,5 +1,5 @@
 export const lanIcon = {
-    jp: `chrome-extension://${chrome.runtime.id}/lanIcon/jp.png`,
+    japanese: `chrome-extension://${chrome.runtime.id}/lanIcon/jp.png`,
     korean: `chrome-extension://${chrome.runtime.id}/lanIcon/kr.png`,
     chinese: `chrome-extension://${chrome.runtime.id}/lanIcon/cn.png`,
     english: `chrome-extension://${chrome.runtime.id}/lanIcon/en.png`,
