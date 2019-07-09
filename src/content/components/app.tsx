@@ -41,6 +41,8 @@ export class App extends Component {
                 this.setState({ show: true, current: this.state.gdata[i], index: i });
             }
         });
+        //remove loader
+        document.getElementById("load").remove();
     }
 
     closeWindow(e) {

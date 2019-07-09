@@ -217,3 +217,47 @@ html {
 .button-red:hover{
     background-color: rgba(192, 57, 43,0.9);
 }
+
+/* loader */
+.load {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.loader {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #bdc3c7;
+    border-bottom-color: #1abc9c;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: coloredspin 4s linear infinite;
+    z-index: 100;
+}
+
+@keyframes coloredspin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        border-bottom-color: #2ecc71;
+        border-top-color: #2ecc71;
+    }
+    50% {
+        transform: rotate(360deg) scale(1.1);
+        border-bottom-color: #3498db;
+        border-top-color: #3498db;
+    }
+    75% {
+        border-bottom-color: #9d59b6;
+        border-top-color: #9d59b6;
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
