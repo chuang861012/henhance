@@ -42,6 +42,7 @@ html {
     background-color: #fff;
     margin: auto;
     color: #555;
+    max-height: 98vh;
 
     display: flex;
     flex-direction: column;
@@ -63,6 +64,7 @@ html {
     display: flex;
     flex: 1;
     padding: 2rem 0;
+    overflow-y: auto;
 }
 
 .modal__item {
@@ -189,33 +191,33 @@ html {
     color: #2d3436;
 }
 
-.button-green{
-    background-color: rgba(39, 174, 96,1.0);
-    color:#fff !important;
+.button-green {
+    background-color: rgba(39, 174, 96, 1);
+    color: #fff !important;
     cursor: pointer;
 }
 
-.button-green:hover{
-    background-color: rgba(39, 174, 96,0.9);
+.button-green:hover {
+    background-color: rgba(39, 174, 96, 0.9);
 }
 
-.button-blue{
-    background-color: rgba(41, 128, 185,1.0);
-    color:#fff !important;
+.button-blue {
+    background-color: rgba(41, 128, 185, 1);
+    color: #fff !important;
     cursor: pointer;
 }
 
-.button-blue:hover{
-    background-color: rgba(41, 128, 185,0.9);
+.button-blue:hover {
+    background-color: rgba(41, 128, 185, 0.9);
 }
 
-.button-red{
-    background-color: rgba(192, 57, 43,1.0);
-    color:#fff !important;
+.button-red {
+    background-color: rgba(192, 57, 43, 1);
+    color: #fff !important;
 }
 
-.button-red:hover{
-    background-color: rgba(192, 57, 43,0.9);
+.button-red:hover {
+    background-color: rgba(192, 57, 43, 0.9);
 }
 
 /* loader */
