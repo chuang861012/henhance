@@ -8,7 +8,11 @@ import Rating from 'react-rating';
 
 library.add(far, fas, faStar);
 
-export default ({ rating }) => {
+interface RatingProps {
+    rating: number;
+}
+
+export default ({ rating }: RatingProps): JSX.Element => {
     let color = '#ffe234';
     if (rating < 1) {
         color = '#ff4545';
@@ -30,6 +34,5 @@ export default ({ rating }) => {
                 fullSymbol={<FontAwesomeIcon icon={['fas', 'star']} color={color} size="xs" />}
             />
         </div>
-
     )
 };

@@ -1,18 +1,25 @@
+// react core
 import * as React from 'React'
-import { Component } from 'react';
 
+// npm packages
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTag, fas, faFile, faHeart, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
-import { init } from '../init';
-import { Gdata } from "../Gdata";
+// custom components
 import Rating from './Rating';
-import { category } from '../category';
-import ImageLoader from './image-loader';
+import ImageLoader from './ImageLoader';
 import MetaBox from './MetaBox';
-import { lanIcon } from '../lanIcon';
+import LanguageTag from './LanguageTag';
+
+// custom functions
+import { init } from '../init';
+import { Category } from '../Category';
+
+// custom types
+import { Gdata } from "../Gdata";
+
 
 library.add(fas, far, faFile, faTag, faHeart, faBookOpen);
 
@@ -23,7 +30,7 @@ interface state {
     index: number;
 }
 
-export class App extends Component {
+export class App extends React.Component {
     state: state = {
         gdata: [],
         show: false,
@@ -88,11 +95,11 @@ export class App extends Component {
             return (
                 <div className={"modal " + (this.state.show ? "" : "close")} onClick={this.closeWindow.bind(this)}>
                     <div className="modal__window">
-                        <h1 className="modal__title" style={{ backgroundColor: category[current.category].d }}>
+                        <h1 className="modal__title" style={{ backgroundColor: Category[current.category].d }}>
                             <span>{current.title}</span>
                             <Rating rating={current.rating} />
                         </h1>
-                        <div className="modal__container" style={{ backgroundColor: category[current.category].l }}>
+                        <div className="modal__container" style={{ backgroundColor: Category[current.category].l }}>
                             {(() => {
                                 if (this.state.index !== 0) {
                                     return (
@@ -112,7 +119,7 @@ export class App extends Component {
                                 <div className="modal__item__tags">
                                     <h1 className={"tag_type language"}>language</h1>
                                     <div className="tag_box">
-                                        <span className="tag"><img src={lanIcon[language]} alt="language" /> {language}</span>
+                                        <LanguageTag language={language} />
                                         {current.tags.translated ? <span className="tag"><span style={{ color: "blue", fontWeight: "bold" }}>&#10003;</span> translated</span> : ""}
                                     </div>
                                 </div>

@@ -1,4 +1,4 @@
-export const category = {
+export const Category = {
     Doujinshi: {
         l: "rgba(255, 121, 121,0.3)",
         d: "rgba(255, 121, 121,0.7)"

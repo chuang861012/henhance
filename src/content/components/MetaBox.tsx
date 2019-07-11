@@ -1,6 +1,12 @@
-import * as React from 'React'
+import * as React from 'React';
 
-export default ({ uploader, posted, filecount }) => {
+interface MetaBoxProps {
+    uploader: string;
+    posted: Date;
+    filecount: number;
+}
+
+export default ({ uploader, posted, filecount }: MetaBoxProps): JSX.Element => {
 
     return (
         <div className="meta__box">
