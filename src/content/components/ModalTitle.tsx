@@ -13,7 +13,7 @@ interface ModalTitleProps {
 export default ({ title, rating, category }: ModalTitleProps): JSX.Element => {
     return (
         <h1 className="modal__title" style={{ backgroundColor: Category[category].d }}>
-            <span>{title}</span>
+            <span className="modal__title--text">{title}</span>
             <Rating rating={rating} />
         </h1>
     );

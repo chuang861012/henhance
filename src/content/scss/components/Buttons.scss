@@ -1,0 +1,30 @@
+.button {
+    &-green {
+        background-color: rgba(39, 174, 96, 1);
+        color: #fff !important;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(39, 174, 96, 0.9);
+        }
+    }
+
+    &-blue {
+        background-color: rgba(41, 128, 185, 1);
+        color: #fff !important;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(41, 128, 185, 0.9);
+        }
+    }
+
+    &-red {
+        background-color: rgba(192, 57, 43, 1);
+        color: #fff !important;
+
+        &:hover {
+            background-color: rgba(192, 57, 43, 0.9);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+html {
+    font-size: 10px;
+}
+
+.modal * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    & a {
+        &:link,
+        &:visited,
+        &:link:active,
+        &:visited:active,
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}

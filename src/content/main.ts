@@ -6,7 +6,7 @@ import { addLoader } from "./utils";
 
 chrome.storage.sync.get(
     null,
-    ({ run }: { run: boolean }): void => {
+    ({ run }): void => {
         if (run) {
             addLoader();
             // append modal

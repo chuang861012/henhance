@@ -26,7 +26,7 @@ export const addLoader = (): void => {
     const template = document
         .createRange()
         .createContextualFragment(
-            `<div class='load' id='load'><p>henhance loading...</p><div class='loader'></div></div>`
+            `<div class='loader' id='loader'><p>henhance loading...</p><div class='loader__spinner'></div></div>`
         );
     document.body.appendChild(template);
 };

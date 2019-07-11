@@ -12,7 +12,10 @@ export const init = async () => {
                 if (e.parentElement === null) break;
                 e = e.parentElement;
             }
-            galleryIdentifiers.push(parseLink(e.getAttribute("href")));
+            const link = e.getAttribute("href");
+            if (link) {
+                galleryIdentifiers.push(parseLink(link));
+            }
         }
     );
 

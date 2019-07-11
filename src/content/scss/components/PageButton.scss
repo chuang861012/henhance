@@ -1,0 +1,23 @@
+.page_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    color: #636e72;
+
+    &:hover {
+        color: #b2bec3;
+        user-select: none;
+    }
+}
+
+.disable {
+    color: #2d3436;
+    user-select: none;
+
+    &:hover {
+        color: #2d3436;
+    }
+}

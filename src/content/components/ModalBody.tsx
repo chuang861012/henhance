@@ -29,8 +29,8 @@ const renderTagBox = ([namespace, tags]: [string, string[]]): JSX.Element | null
     } else if (tags.length > 0) {
         return (
             <div key={namespace} className="modal__item__tags">
-                <h1 className={"tag_type " + namespace}>{namespace}</h1>
-                <div className="tag_box">
+                <h1 className={"modal__item__tags--type " + namespace}>{namespace}</h1>
+                <div className="modal__item__tags--box">
                     {renderTags(namespace, tags)}
                 </div>
             </div>
@@ -51,8 +51,8 @@ export default ({ gallery, index, total, onPageChange }: ModalBodyProps): JSX.El
             </div>
             <div className="modal__item" style={{ flex: 1 }}>
                 <div className="modal__item__tags">
-                    <h1 className={"tag_type language"}>language</h1>
-                    <div className="tag_box">
+                    <h1 className={"modal__item__tags--type language"}>language</h1>
+                    <div className="modal__item__tags--box">
                         <LanguageTag language={language} />
                         {gallery.tags.translated ? <span className="tag"><span style={{ color: "blue", fontWeight: "bold" }}>&#10003;</span> translated</span> : ""}
                     </div>

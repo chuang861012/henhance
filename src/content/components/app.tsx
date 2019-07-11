@@ -44,7 +44,7 @@ export class App extends React.Component {
         }
 
         //remove loader
-        const loader = document.getElementById("load");
+        const loader = document.getElementById("loader");
         if (loader) {
             loader.remove();
         }
@@ -79,6 +79,6 @@ export class App extends React.Component {
                 </div>
             )
         }
-        return <div></div>
+        return <div></div>;
     }
 }

@@ -1,0 +1,11 @@
+.tag {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    white-space: nowrap;
+    display: inline-block;
+
+    &:hover {
+        color: inherit;
+        text-decoration: underline !important;
+    }
+}
