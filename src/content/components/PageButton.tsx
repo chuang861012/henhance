@@ -1,12 +1,18 @@
 import * as React from 'react';
 
 interface PageButtonProps {
-    enable: boolean;
+    page: number;
+    total: number;
     symbol: string;
-    handler?: React.EventHandler<React.MouseEvent>
+    handler: (index: number) => void;
 }
 
-export default ({ enable, handler, symbol }: PageButtonProps): JSX.Element => {
-    const classNameString = enable ? "page_button" : "page_button disable";
-    return <div className={classNameString} onClick={handler}>{symbol}</div>
+export default ({ page, total, handler, symbol }: PageButtonProps): JSX.Element => {
+    if (page >= 0 && page <= total - 1) {
+        return (
+            <div className="page_button" onClick={() => { handler(page) }}>{symbol}</div>
+        )
+    } else {
+        return <div className="page_button disable">{symbol}</div>
+    }
 }

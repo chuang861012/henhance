@@ -1,6 +1,5 @@
 import * as React from 'React';
 
-// npm packages
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas, faFile, faHeart, faBookOpen } from '@fortawesome/free-solid-svg-icons';

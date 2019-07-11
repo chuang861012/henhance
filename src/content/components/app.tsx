@@ -12,7 +12,6 @@ import { init } from '../init';
 // custom types
 import { Gdata } from "../Gdata";
 
-
 interface state {
     gdata: Gdata[];
     show: boolean;
@@ -30,16 +29,25 @@ export class App extends React.Component {
 
     async componentDidMount() {
         this.setState({ gdata: await init() });
-        document.querySelector('.itg').addEventListener('click', (e) => {
-            e.preventDefault();
-            if (e.target instanceof Element) {
-                const target = e.target.closest('*[class^="gl1"],tr');
-                const i = Array.prototype.slice.call(target.parentElement.children).indexOf(target);
-                this.setState({ show: true, current: this.state.gdata[i], index: i });
-            }
-        });
+        const galleryTable = document.querySelector('.itg');
+        if (galleryTable) {
+            galleryTable.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (e.target instanceof Element) {
+                    const target = e.target.closest('*[class^="gl1"],tr');
+                    if (target && target.parentElement) {
+                        const i = Array.prototype.slice.call(target.parentElement.children).indexOf(target);
+                        this.setState({ show: true, current: this.state.gdata[i], index: i });
+                    }
+                }
+            });
+        }
+
         //remove loader
-        document.getElementById("load").remove();
+        const loader = document.getElementById("load");
+        if (loader) {
+            loader.remove();
+        }
     }
 
     closeWindow(e: React.MouseEvent<HTMLDivElement>): void {
