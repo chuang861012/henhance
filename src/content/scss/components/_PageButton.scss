@@ -6,6 +6,8 @@
     margin: 0 1.5rem;
     cursor: pointer;
     color: #636e72;
+    position: sticky;
+    top: 0;
 
     &:hover {
         color: #b2bec3;
