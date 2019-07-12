@@ -4,8 +4,7 @@
     }
     
     &__footer__button {
-        @include flexbox-row;
-        @include flexbox-centered;
+        @include flexbox-row(center,center);
         flex-wrap: nowrap;
 
         flex: 1;

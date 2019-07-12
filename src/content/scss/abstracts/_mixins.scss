@@ -1,14 +1,13 @@
-@mixin flexbox-row{
+@mixin flexbox-row($justify-content: flex-start, $align-items: stretch) {
     display: flex;
     flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
-@mixin flexbox-col{
+@mixin flexbox-col($justify-content: flex-start, $align-items: stretch) {
     display: flex;
     flex-direction: column;
-}
-
-@mixin flexbox-centered{
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }

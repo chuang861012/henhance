@@ -1,6 +1,5 @@
 .meta__box {
-    @include flexbox-col;
-    align-items: center;
+    @include flexbox-col(flex-start,center);
 
     &__title {
         @include flexbox-row;

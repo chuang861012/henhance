@@ -1,6 +1,5 @@
 .rater {
-    @include flexbox-col;
-    align-items: center;
+    @include flexbox-col(flex-start,center);
 
     background-color: rgba(99, 110, 114, 0.8);
     padding: 1rem;

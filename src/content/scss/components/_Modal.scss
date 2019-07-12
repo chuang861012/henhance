@@ -9,6 +9,7 @@
     z-index: 99;
 
     &__window{
+        @include flexbox-col;
         text-align: start;
         min-height: 60vh;
         width: 80vw;
@@ -16,8 +17,6 @@
         margin: auto;
         color: #555;
         max-height: 98vh;
-    
-        @include flexbox-col;
     }
 }
 
