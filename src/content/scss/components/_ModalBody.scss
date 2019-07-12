@@ -1,19 +1,17 @@
 .modal {
     &__container {
-        display: flex;
+        @include flexbox-row;
         flex: 1;
         padding: 2rem 0;
         overflow-y: auto;
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
+        @include flexbox-col;
         margin: 1rem;
 
         &__tags {
-            display: flex;
-            flex-direction: column;
+            @include flexbox-col;
 
             &:nth-child(odd) {
                 background-color: rgba(150, 150, 150, 0.1);

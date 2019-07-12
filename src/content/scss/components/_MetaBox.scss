@@ -1,20 +1,16 @@
 .meta__box {
-    display: flex;
-    flex-direction: column;
+    @include flexbox-col;
+    align-items: center;
 
     &__title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox-row;
         font-size: 1.5rem;
         padding: 0.5rem;
         font-family: fantasy;
     }
 
     &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox-row;
         font-size: 1.5rem;
         padding: 0.5rem;
         text-align: center;

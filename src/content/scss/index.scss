@@ -1,26 +1,25 @@
-@import './base/root';
+@import "./base/root";
+
+@import "./abstracts/mixins";
 
 // tools
-@import './components/Buttons';
+@import "./components/Buttons";
 
 // loader
-@import './components/Loader';
+@import "./components/Loader";
 
 // modal
-@import './components/Modal';
+@import "./components/Modal";
 
 // modal title
-@import './components/ModalTitle';
-@import './components/Rater';
+@import "./components/ModalTitle";
+@import "./components/Rater";
 
 // modal body
-@import './components/ModalBody';
-@import './components/MetaBox';
-@import './components/PageButton';
-@import './components/Tag';
+@import "./components/ModalBody";
+@import "./components/MetaBox";
+@import "./components/PageButton";
+@import "./components/Tag";
 
 // modal footer
-@import './components/ModalFooter';
-
-
-
+@import "./components/ModalFooter";

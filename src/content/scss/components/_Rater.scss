@@ -1,8 +1,8 @@
 .rater {
-    background-color: rgba(99, 110, 114, 0.8);
-    display: flex;
-    flex-direction: column;
+    @include flexbox-col;
     align-items: center;
+
+    background-color: rgba(99, 110, 114, 0.8);
     padding: 1rem;
 
     h3 {

@@ -1,4 +1,5 @@
 .modal {
+    @include flexbox-row;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -6,10 +7,6 @@
     left: 0;
     background-color: rgba(7, 7, 7, 0.8);
     z-index: 99;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &__window{
         text-align: start;
@@ -20,8 +17,7 @@
         color: #555;
         max-height: 98vh;
     
-        display: flex;
-        flex-direction: column;
+        @include flexbox-col;
     }
 }
 

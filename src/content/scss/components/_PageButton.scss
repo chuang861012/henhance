@@ -1,7 +1,6 @@
 .page_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox-row;
+    @include flexbox-centered;
     font-size: 10rem;
     margin: 0 1.5rem;
     cursor: pointer;

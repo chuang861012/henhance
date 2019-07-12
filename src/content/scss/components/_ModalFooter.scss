@@ -1,16 +1,16 @@
 .modal{
     &__footer {
-        display: flex;
+        @include flexbox-row;
     }
     
     &__footer__button {
-        flex: 1;
-        font-size: 3rem;
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox-row;
+        @include flexbox-centered;
         flex-wrap: nowrap;
+
+        flex: 1;
+        font-size: 2rem;
+        padding: 1.5rem;
         cursor: pointer;
     }
 }
