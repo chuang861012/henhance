@@ -24,8 +24,8 @@
     "react-star-ratings": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0",
     "@types/chrome": "0.0.86",
@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^7.14.2",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-web-extension": "^1.5.2",
-    "sass": "^1.22.3",
-    "typescript": "^3.5.2"
+    "sass": "^1.22.4",
+    "typescript": "^3.5.3"
   }
 }
