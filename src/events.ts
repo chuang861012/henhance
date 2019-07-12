@@ -1,9 +1,32 @@
+import { TagSetting } from "./TagSetting";
 // initialize data storage
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.get(null, (list) => {
-        const run = list.run || true;
+    chrome.storage.sync.get(null, list => {
+        const run: boolean = list.run || true;
+        const upVote:TagSetting = list.upVote || {
+            artist: [],
+            character: [],
+            group: [],
+            male: [],
+            parody: [],
+            reclass: [],
+            misc: [],
+            female: []
+        };
+        const downVote:TagSetting = list.downVote || {
+            artist: [],
+            character: [],
+            group: [],
+            male: [],
+            parody: [],
+            reclass: [],
+            misc: [],
+            female: []
+        };
         chrome.storage.sync.set({
-            "run": run
+            run: run,
+            upVote: upVote,
+            downVote: downVote
         });
     });
 });
@@ -15,11 +38,13 @@ chrome.runtime.onUpdateAvailable.addListener(() => {
 
 // change icon
 chrome.runtime.onMessage.addListener((request, sender) => {
-    if (request.message === "active") {
-        chrome.browserAction.setIcon({
-            path: "res/icon16.png",
-            tabId: sender.tab.id
-        });
+    if (sender.tab) {
+        if (request.message === "active") {
+            chrome.browserAction.setIcon({
+                path: "res/icon16.png",
+                tabId: sender.tab.id
+            });
+        }
     }
 });
 
@@ -29,7 +54,7 @@ chrome.browserAction.setBadgeBackgroundColor({
 });
 
 // set text on / off
-chrome.storage.onChanged.addListener((change) => {
+chrome.storage.onChanged.addListener(change => {
     if (change.run) {
         if (!change.run.newValue) {
             chrome.browserAction.setBadgeText({

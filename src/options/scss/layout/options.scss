@@ -1,0 +1,76 @@
+.options {
+    display: flex;
+    width: 60vw;
+    min-width: 800px;
+    height: 60vh;
+    background-color: #fff;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 50%;
+
+        &--control {
+            font-size: 3rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+
+            & > div {
+                width: 10rem;
+                height: 100%;
+            }
+
+            form {
+                input {
+                    height: 100%;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            width: 90%;
+            margin-bottom: 2rem;
+            background-color: #ecf0f1;
+            flex:1;
+
+            &--item {
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-align: center;
+                margin: 0.5rem 0;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+.textInput {
+    box-shadow: none;
+    border: 2px solid #e7e7e7;
+}
+
+.button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.2s;
+
+    &:hover {
+        background-color: #555555; /* Green */
+        color: white;
+    }
+}

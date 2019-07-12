@@ -33,6 +33,6 @@ export const init = async () => {
             galleryTitleElements[i].prepend(flagImage);
         }
     }
-
+    
     return gdata;
 };

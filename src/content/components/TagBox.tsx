@@ -2,19 +2,21 @@ import * as React from 'react';
 
 import Tag from './Tag';
 import TagNamespaceIcon from './TagNamespaceIcon';
+import { TagSetting } from '../../TagSetting';
 
 interface TagBoxProps {
     namespace: string;
     tags: string[];
+    setting: { upVote: TagSetting, downVote: TagSetting };
 }
 
-const renderTags = (namespace: string, tags: string[]) => {
+const renderTags = (namespace: string, tags: string[], setting: { upVote: TagSetting, downVote: TagSetting }) => {
     return tags.map((tag: string) => {
-        return <Tag namespace={namespace} content={tag} />
+        return <Tag namespace={namespace} content={tag} setting={setting} />
     });
 }
 
-export default ({ namespace, tags }: TagBoxProps): JSX.Element | null => {
+export default ({ namespace, tags, setting }: TagBoxProps): JSX.Element | null => {
     if (namespace === 'translated' || namespace === 'language') {
         return null;
     } else if (tags.length > 0) {
@@ -25,7 +27,7 @@ export default ({ namespace, tags }: TagBoxProps): JSX.Element | null => {
                     {namespace}
                 </h1>
                 <div className="modal__item__tags--box">
-                    {renderTags(namespace, tags)}
+                    {renderTags(namespace, tags, setting)}
                 </div>
             </div>
         );
