@@ -4,7 +4,7 @@ import ImageLoader from './ImageLoader';
 import MetaBox from './MetaBox';
 import LanguageTag from './LanguageTag';
 import PageButton from './PageButton';
-import Tag from './Tag';
+import TagBox from './TagBox';
 
 import { Category } from '../Category';
 
@@ -17,27 +17,8 @@ interface ModalBodyProps {
     onPageChange: (index: number) => void;
 }
 
-const renderTags = (namespace: string, tags: string[]) => {
-    return tags.map((tag: string) => {
-        return <Tag namespace={namespace} content={tag} />
-    });
-}
-
 const renderTagBox = ([namespace, tags]: [string, string[]]): JSX.Element | null => {
-    if (namespace === 'translated' || namespace === 'language') {
-        return null;
-    } else if (tags.length > 0) {
-        return (
-            <div key={namespace} className="modal__item__tags">
-                <h1 className={"modal__item__tags--type " + namespace}>{namespace}</h1>
-                <div className="modal__item__tags--box">
-                    {renderTags(namespace, tags)}
-                </div>
-            </div>
-        );
-    } else {
-        return null;
-    }
+    return <TagBox namespace={namespace} tags={tags} />
 }
 
 export default ({ gallery, index, total, onPageChange }: ModalBodyProps): JSX.Element => {
