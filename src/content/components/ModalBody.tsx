@@ -5,6 +5,7 @@ import MetaBox from './MetaBox';
 import LanguageTag from './LanguageTag';
 import PageButton from './PageButton';
 import TagBox from './TagBox';
+import TagNamespaceIcon from './TagNamespaceIcon';
 
 import { Category } from '../Category';
 
@@ -32,7 +33,10 @@ export default ({ gallery, index, total, onPageChange }: ModalBodyProps): JSX.El
             </div>
             <div className="modal__item" style={{ flex: 1 }}>
                 <div className="modal__item__tags">
-                    <h1 className={"modal__item__tags--type language"}>language</h1>
+                    <h1 className="modal__item__tags--type">
+                        <TagNamespaceIcon namespace="language" />
+                        language
+                    </h1>
                     <div className="modal__item__tags--box">
                         <LanguageTag language={language} />
                         {gallery.tags.translated ? <span className="tag"><span style={{ color: "blue", fontWeight: "bold" }}>&#10003;</span> translated</span> : ""}
