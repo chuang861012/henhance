@@ -19,7 +19,7 @@ export default ({ namespace, tags }: TagBoxProps): JSX.Element | null => {
     } else if (tags.length > 0) {
         return (
             <div key={namespace} className="modal__item__tags">
-                <h1 className={"modal__item__tags--type " + namespace}>{namespace}</h1>
+                <h1 className="modal__item__tags--type ">{namespace}</h1>
                 <div className="modal__item__tags--box">
                     {renderTags(namespace, tags)}
                 </div>

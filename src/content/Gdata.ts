@@ -32,7 +32,7 @@ export interface Gdata {
 
 export interface Tag {
     translated: boolean;
-    language?: string;
+    language: string | null;
     parody: string[];
     character: string[];
     group: string[];

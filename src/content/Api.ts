@@ -2,10 +2,10 @@ import { ResponseGdata, Gdata, Tag } from "./Gdata";
 
 export class Api {
     static get(data: [number, string][]): Promise<Gdata[]>[] {
-        const pending = [];
+        const pending: Promise<Gdata[]>[] = [];
 
-        while(data.length > 0){
-            const reqData = data.splice(0,25);
+        while (data.length > 0) {
+            const reqData = data.splice(0, 25);
             const requestBody = {
                 method: "gdata",
                 gidlist: reqData,
