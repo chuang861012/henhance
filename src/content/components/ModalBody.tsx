@@ -50,17 +50,20 @@ export default class ModalBody extends React.Component<ModalBodyProps, ModalBody
         const language = gallery.tags.language || 'japanese';
         return (
             <div className="modal__container" style={{ backgroundColor: Category[gallery.category].l }}>
+
                 <PageButton page={index - 1} total={total} symbol="❬" handler={onPageChange} />
+
                 <div className="modal__item" style={{ maxWidth: "200px" }}>
                     <ImageLoader src={gallery.thumb} />
                     <MetaBox uploader={gallery.uploader} filecount={gallery.filecount} posted={gallery.posted} />
                 </div>
+
                 <div className="modal__item" style={{ flex: 1 }}>
                     <div className="modal__item__tags">
                         <h1 className="modal__item__tags--type">
                             <TagNamespaceIcon namespace="language" />
                             language
-                    </h1>
+                        </h1>
                         <div className="modal__item__tags--box">
                             <LanguageTag language={language} />
                             {gallery.tags.translated ? <span className="tag"><span style={{ color: "blue", fontWeight: "bold" }}>&#10003;</span> translated</span> : ""}
@@ -68,7 +71,9 @@ export default class ModalBody extends React.Component<ModalBodyProps, ModalBody
                     </div>
                     {Object.entries(gallery.tags).map(this.renderTagBox)}
                 </div>
+
                 <PageButton page={index + 1} total={total} symbol="❭" handler={onPageChange} />
+
             </div>
         );
     }

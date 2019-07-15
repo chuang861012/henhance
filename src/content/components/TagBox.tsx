@@ -22,7 +22,7 @@ export default ({ namespace, tags, setting }: TagBoxProps): JSX.Element | null =
     } else if (tags.length > 0) {
         return (
             <div key={namespace} className="modal__item__tags">
-                <h1 className="modal__item__tags--type ">
+                <h1 className="modal__item__tags--type">
                     <TagNamespaceIcon namespace={namespace} />
                     {namespace}
                 </h1>
