@@ -1,4 +1,4 @@
-import { TagSetting } from "./TagSetting";
+import { TagSetting } from "./types/TagSetting";
 // initialize data storage
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.get(null, list => {

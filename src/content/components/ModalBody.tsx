@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState, useEffect, useCallback } from 'react';
 
 import ImageLoader from './ImageLoader';
 import MetaBox from './MetaBox';
@@ -10,8 +9,7 @@ import TagNamespaceIcon from './TagNamespaceIcon';
 
 import { Category } from '../Category';
 
-import { Gdata } from "../Gdata";
-import { TagSetting } from '../../TagSetting';
+import { Gdata } from "../../types/Gdata";
 
 interface ModalBodyProps {
     gallery: Gdata;
@@ -20,27 +18,10 @@ interface ModalBodyProps {
     onPageChange: (index: number) => void;
 }
 
-interface TagSettings {
-    upVote: TagSetting,
-    downVote: TagSetting
-}
-
 export default ({ gallery, index, total, onPageChange }: ModalBodyProps) => {
-    const [tagSettings, setTagSettings] = useState<TagSettings | null>(null);
-
-    useEffect(() => {
-        chrome.storage.sync.get(null, (list): void => {
-            const upVote: TagSetting = list.upVote;
-            const downVote: TagSetting = list.downVote;
-            setTagSettings({ upVote, downVote });
-        });
-    }, []);
-
-    const renderTagBox = useCallback(([namespace, tags]: [string, string[]]): JSX.Element | null => {
-        if (tagSettings !== null) {
-            return <TagBox namespace={namespace} tags={tags} setting={tagSettings} />
-        } else return null;
-    }, [tagSettings])
+    const renderTagBox = ([namespace, tags]: [string, string[]]): JSX.Element | null => {
+        return <TagBox namespace={namespace} tags={tags} />
+    }
 
     const language = gallery.tags.language || 'japanese';
 

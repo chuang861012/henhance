@@ -1,3 +1,8 @@
+export interface TagSettings{
+    upVote: TagSetting | undefined;
+    downVote: TagSetting | undefined;
+}
+
 export interface TagSetting{
     artist: string[],
     character: string[],

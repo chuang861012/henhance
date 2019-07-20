@@ -1,14 +1,16 @@
 import * as React from "React";
 import ReactDOM from "react-dom";
 
-import App from "./components/app";
+import App from "./components/App";
 import { addLoader } from "./utils";
 
 import { init } from './init';
 
+import { ChromeStorage } from '../types/ChromeStorage';
+
 chrome.storage.sync.get(
-    null,
-    async ({ run }) => {
+    ['run', 'upVote', 'downVote'],
+    async ({ run, upVote, downVote }: ChromeStorage) => {
         if (run) {
             addLoader();
             // append modal
@@ -16,7 +18,12 @@ chrome.storage.sync.get(
             document.body.prepend(modal);
             const gdata = await init();
 
-            ReactDOM.render(<App gdata={gdata} />, modal);
+            ReactDOM.render(
+                <App
+                    gdata={gdata}
+                    tagSettings={{ upVote, downVote }}
+                />
+                , modal);
         }
     }
 );

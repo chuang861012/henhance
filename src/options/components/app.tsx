@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import OptionsSection from './OptionsSection';
 
-import { TagSetting } from '../../TagSetting';
+import { TagSetting } from '../../types/TagSetting';
 
 interface AppState {
     tagSetting: { upVote: TagSetting | null, downVote: TagSetting | null };

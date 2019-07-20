@@ -1,4 +1,4 @@
-import { ResponseGdata, Gdata, Tag } from "./Gdata";
+import { ResponseGdata, Gdata, Tag } from "../types/Gdata";
 
 export class Api {
     static get(data: [number, string][]): Promise<Gdata[]>[] {

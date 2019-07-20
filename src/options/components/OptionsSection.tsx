@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas, faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 
-import { TagSetting } from '../../TagSetting';
+import { TagSetting } from '../../types/TagSetting';
 
 library.add(fas, faThumbsUp, faThumbsDown);
 
