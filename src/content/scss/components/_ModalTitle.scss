@@ -1,6 +1,6 @@
 .modal {
     &__title {
-        @include flexbox-row(space-between,center);
+        @include flexbox-row(space-between);
         font-size: 2.2rem;
         
         &--text {
