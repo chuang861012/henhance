@@ -45,7 +45,7 @@
                 "https://e-hentai.org/stats*"
             ],
             "js": [
-                "content/main.tsx"
+                "content/index.tsx"
             ],
             "css": [
                 "content/scss/index.scss"
