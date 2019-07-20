@@ -12,19 +12,10 @@ interface RatingProps {
     rating: number;
 }
 
+const colors = ['#ff4545', '#ffa534', '#ffe234', '#b7dd29', '#57e32c', '#57e32c'];
+
 export default ({ rating }: RatingProps): JSX.Element => {
-    let color = '#ffe234';
-    if (rating < 1) {
-        color = '#ff4545';
-    } else if (rating < 2) {
-        color = '#ffa534';
-    } else if (rating < 3) {
-        color = '#ffe234';
-    } else if (rating < 4) {
-        color = '#b7dd29';
-    } else {
-        color = '#57e32c';
-    }
+    let color = colors[Math.floor(rating)];
 
     return (
         <div className="rater">
