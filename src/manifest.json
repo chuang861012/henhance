@@ -2,15 +2,13 @@
     "manifest_version": 2,
     "name": "henhance : Make e-hentai/exhentai friendly",
     "description": "Enhance e-hentai & exhentai browsing experience!",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "browser_action": {
         "default_icon": "icon/icon16.png",
         "default_popup": "popup.html"
     },
     "permissions": [
-        "contextMenus",
-        "storage",
-        "https://exhentai.org/*"
+        "storage"
     ],
     "options_page": "options.html",
     "content_scripts": [

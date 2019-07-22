@@ -11,8 +11,5 @@ Enhance e-hentai & exhentai browsing experience!
 - some kind of gallery hiding feature
 - customize tag scoring feature
 
-## Install extension
-Free download : [Chrome Web Store - Extensions](https://chrome.google.com/webstore/detail/henhance-make-e-hentaiexh/ledkdgpoghklhhhkoamnegifdjooafkf)
-
 ## License
 This extension is available under the MIT license.
